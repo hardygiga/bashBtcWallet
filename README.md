@@ -10,4 +10,4 @@
  sudo apt install -y jq qrencode bc curl
  ```
  
-![Screenshot](/assets/images/screenshot.png)
+![Screenshot](screenshot.png)
