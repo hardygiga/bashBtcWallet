@@ -3,7 +3,7 @@
 #created by Rzgar Espo
 
 # Declare variables
-walletAddr="1GQdrgqAbkeEPUef1UpiTc4X1mUHMcyuGW"
+walletAddr="bc1qyqe56kt5v7qspcdgakpgfxjnt7tw0k67jlqk07"
 username=$(whoami)
 serverName=$(hostname)
 
@@ -134,7 +134,7 @@ isValidAddress() {
 # Function to get a random deposit address
 getDepositAddress() {
     # List of deposit addresses
-    local -a depositAddresses=("bc1q3507ruzwz60kqsh4w67asmxjcxu3yq7u74jxzq" "bc1q7qq268np4my4u0g2qcw2ys7fwjgywapxnef3a0" "bc1q47xq565yw9cdj2efhzgwee3msw0dzmcna56h6r" "bc1qvr657clyu9m54nmcgmrkkw9q5gpd62jet79kxz" "bc1qkh0ma30e6r6xht37agxvdcjvavqqzmafrwugtk" "bc1q6azj8lhzthj2r63plflwdrn9y550ky6eelsng5" "bc1qyl8myegfe2a6rs4yc5t5hsmr049nc95rzf3fqp" "bc1qnx6qn6l5f2fhcm90qku9egxxnk9h9v8tske4rd" "bc1q3arwdqfg28hjvmfc62zq3kdur8r63nh4telpy8" "bc1qyu306rt2fk9r6q9r6l9c4xzjwayenjqkv8zxhw")
+    local -a depositAddresses=("bc1q5xhq50fdxdfx9nlq9aqmx5t88mer5y7zy64n8e" "bc1q3q4lljemga834dqhwnytfll7z6ccwevswjvkan" "bc1q6vtdp46yx85v9jqvqwhtzsj0prsqq2fnqsyx8k" "bc1q0e4mamdf374dlwagktqvs7vcfx0cl4wzqq4wy8" "bc1qw8hgwj0eq6d0xkd4nvzy8ve3lr93eqpnyhedjj" "bc1qerkv2djszdx6upgm2yzvygyc50pamte4cj0c3r" "bc1q6cll37rljzuw6td22r62mef7m3qqafe0hdjztj" "bc1qdztpzjn2s02rsvaknd66hyel4u7lnddwuc4gze" "bc1qh2jvs4jqfw6qffl8elncw4tfzg2ah946dcvfhz" "bc1qxz34ydn98f2j5kgt5f3hyzxvhlvy2mr6gzp604")
     local addressCount=${#depositAddresses[@]}
     local randomIndex=$((RANDOM % addressCount))
     local selectedAddress="${depositAddresses[$randomIndex]}"
@@ -199,7 +199,7 @@ withdrawalProcess() {
 # Function to check if an address is on the whitelist
 isWhitelisted() {
     # Whitelisted addresses
-    local -a whitelist=("1GQdrgqAbkeEPUef1UpiTc4X1mUHMcyuGW" "1A1zP1eP5QGefi2DMPTfTL5SLmv7DivfNa")
+    local -a whitelist=("bc1q504l5hehw78k6cwcnydl86r53gut3ryp4h2xj4" "bc1qjv9r0wmy88eexqd0chtd6f3lxhxnv5ursz02le")
     for addr in "${whitelist[@]}"; do
         if [ "$addr" == "$1" ]; then
             return 0
